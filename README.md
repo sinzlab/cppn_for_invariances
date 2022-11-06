@@ -2,6 +2,10 @@
 
 We present a systematic data-driven approach based on implicit image representations and contrastive learning, that allows the identification and parameterization of the manifold of highly activating stimuli, for visual sensory neurons.
 
+<p align="center">
+  <img src="figures/concept.png" />
+</p>
+
 You can read the full paper [here]().
 
 ## Requirements
