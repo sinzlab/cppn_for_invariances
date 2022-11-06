@@ -1,1 +1,1 @@
-# learning-invariance-manifold
+# Learning Invariance Manifold via CPPNs
