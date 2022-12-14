@@ -14,8 +14,7 @@ RUN git config --global credential.helper store &&\
     echo https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com >> ~/.git-credentials
 
 # clone projects from public/private github repos
-RUN git clone --depth 1 --branch challenge https://github.com/${DEV_SOURCE}/data_port.git &&\
-    git clone --depth 1 --branch inception_loops https://github.com/${DEV_SOURCE}/nnvision.git &&\
+RUN git clone --depth 1 --branch inception_loops https://github.com/${DEV_SOURCE}/nnvision.git &&\
     git clone -b transformer_readout https://github.com/KonstantinWilleke/neuralpredictors
 
 FROM ${BASE_IMAGE}
@@ -43,8 +42,7 @@ RUN python -m pip --no-cache-dir install \
     nnfabrik
 
 # install the cloned repos
-RUN python -m pip install -e /src/data_port &&\
-    python -m pip install --no-use-pep517 -e /src/neuralpredictors &&\
+RUN python -m pip install --no-use-pep517 -e /src/neuralpredictors &&\
     python -m pip install -e /src/nnvision &&\
     python -m pip install git+https://github.com/sacadena/ptrnets &&\
     python -m pip install git+https://github.com/dicarlolab/CORnet
@@ -52,7 +50,8 @@ RUN python -m pip install -e /src/data_port &&\
 
 # install the current project
 WORKDIR /project
-RUN mkdir /project/invariant
-COPY ./invariant /project/invariant
+RUN mkdir /project/invariance_generation
+COPY ./invariance_generation /project/invariance_generation
 COPY ./setup.py /project
 RUN python -m pip install -e /project
+RUN apt-get install python3-pip python-dev
