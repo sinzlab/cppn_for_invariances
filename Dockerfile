@@ -54,4 +54,3 @@ RUN mkdir /project/invariance_generation
 COPY ./invariance_generation /project/invariance_generation
 COPY ./setup.py /project
 RUN python -m pip install -e /project
-RUN apt-get install python3-pip python-dev
