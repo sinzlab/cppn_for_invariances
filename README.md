@@ -19,5 +19,5 @@ This project requires that you have the following installed:
 - [docker](https://docs.docker.com/get-docker/)
 - [docker-compose](https://docs.docker.com/compose/install/)
 
-
+Before building the docker image from the Dockerfile is necessary to edit the [.env_template](https://github.com/sinzlab/cppn_for_invariances/blob/main/.env_template) file and as suggested
 
