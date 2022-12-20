@@ -2,7 +2,7 @@ version: "3.4"
 
 services:
   jupyterlab:
-    image: invariant_pub
+    image: invariance_generation
     build:
       context: ./
       dockerfile: ./Dockerfile
