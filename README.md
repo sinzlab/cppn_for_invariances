@@ -43,7 +43,7 @@ This project requires that you have the following installed:
 
 ## Issues
 
-If you encounter any problems or have suggestions, please open an [issue]().
+If you encounter any problems or have suggestions, please open an [issue](https://github.com/sinzlab/cppn_for_invariances/issues).
 
 ## Citing our work
 ```
