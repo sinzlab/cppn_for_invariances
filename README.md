@@ -6,7 +6,7 @@ We present a systematic data-driven approach based on implicit image representat
   <img src="figures/concept.png" />
 </p>
 
-We tested our method on simple [Gabor-based model neurons](https://github.com/sinzlab/cppn_for_invariances/tree/main/notebooks/simulated_data) with known (and exact) invariances as well as neural network models predicting the responses of [macaque V1 complex cell neurons](https://github.com/sinzlab/cppn_for_invariances/blob/main/notebooks/macaqueV1/find_invariance.ipynb). Below are the invraince manifold of two example V1 neurons, learned by our method:
+We tested our method on simple [Gabor-based model neurons](https://github.com/sinzlab/cppn_for_invariances/tree/main/notebooks/simulated_data) with known (and exact) invariances as well as neural network models predicting the responses of [macaque V1 complex cell neurons](https://github.com/sinzlab/cppn_for_invariances/blob/main/notebooks/macaqueV1/find_invariance.ipynb). Below are the learned invriance manifolds of two example V1 neurons:
 
 <br>
 
