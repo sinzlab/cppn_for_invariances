@@ -1,21 +1,13 @@
 version: "3.4"
 
 services:
-
   jupyterlab:
-    privileged: true
     image: invariance_generation
     build:
       context: ./
       dockerfile: ./Dockerfile
-      args:
-        - GITHUB_USER=${GITHUB_USER}
-        - DEV_SOURCE=${DEV_SOURCE}
-        - GITHUB_TOKEN=${GITHUB_TOKEN}
     volumes:
       - .:/project
-    env_file:
-      - .env
     entrypoint:
       - jupyter
       - lab

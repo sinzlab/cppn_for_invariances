@@ -6,7 +6,8 @@ import numpy as np
 import random
 import torch
 from neuralpredictors.layers.attention import AttentionConv
-from neuralpredictors.layers.cores import DepthSeparableConv2d, Core2d
+from neuralpredictors.layers.conv import DepthSeparableConv2d
+from neuralpredictors.layers.cores.base import Core
 from neuralpredictors import regularizers
 from collections import OrderedDict, Iterable
 from neuralpredictors.layers.readouts import PointPooled2d
@@ -123,7 +124,7 @@ class GlobalAvgPool(nn.Module):
         return x.view(*(x.shape[:-2]), -1).mean(-1)
 
 
-class SE2dCore(Core2d, nn.Module):
+class SE2dCore(Core, nn.Module):
     def __init__(
         self,
         input_channels,
